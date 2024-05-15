@@ -88,28 +88,29 @@ img{
 
 /*      Page Productos     */
 .contenedor {
+    max-width: 100%;
     display: flex;
-    width: 80%;
-    margin: 50px auto 0;
-    border-radius: 10px;
+    background-color: #bea7a7;
 }
 
 .filterContent{
+    width: 33%;
     background-color: #741b1b;
-    width: 25%;
-    height: 600px;
-    margin: 20px auto 20%; /*nopasar de 120%*/
-    border-radius: 10px;
+}
+
+.filter{
+    height: auto;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    width: auto;
+    background-color: #45a049;
 }
 
 .filterContent .submit {
     text-align: center; 
 }
 
-
-.filter{
-    padding: 40px;
-}
 
 .filter .item{
     display: flex;
@@ -136,6 +137,7 @@ img{
     width: 40%;
     padding: 0 10px;
 }
+
 .submit button {
     background-color: #4CAF50; 
     color: white;
@@ -156,35 +158,54 @@ img{
 }
 
 #list{
-    width: 75%;
+    margin: 0 100px;
+    background-color: #76b1f5;
+    max-width: 50%;
+    width: auto;
     padding: 20px;
     display: grid;
     column-gap: 1%;
     grid-template-columns: 32.66% 32.66% 32.66%;
     row-gap: 10px;
 }
+
+#list .item{
+    background-color: rgba(110, 255, 156, 0.89);
+    max-width: 100%;
+    max-height: 450px;
+    width: auto;
+    margin: 7px;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+
+}
+
 #list .item img {
-    width: 90%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
     margin: 20px auto;
     display: block;
     border-radius: 10px;
 }
-#list .itesss{
-    background-color: rgba(197, 219, 204, 0.333);
-    margin-bottom: 20px;
-    height: 50%;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
-}
+
 #list .item .title{
     font-weight: bold;
 }
-#list .item .price{
-    color: #F5B976;
-    letter-spacing: 1px;
-    padding: 20px;
+#list .item .precio{
+    color: #f58576;
+}
+
+#list .item .detalles{
+    cursor: pointer;
+    font-family: var(--body-font);
+    background-color: #38435821;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 /* Page Tienda */

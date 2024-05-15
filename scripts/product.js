@@ -247,6 +247,24 @@
             newPrice.innerText = 's/.' + item.precio.toLocaleString() ;
             newItem.appendChild(newPrice)
 
+            //Crea el boton ver mas y lo agrega
+            let newDetalles = document.createElement('button');
+            newDetalles.classList.add('detalles');
+            
+            // Crear el icono utilizando Font Awesome
+            let icon = document.createElement('i');
+            icon.classList.add('fas', 'fa-chevron-right');
+            
+            // Texto para el botón
+            let buttonText = document.createTextNode('Ver más ');
+            
+            // Agregar el icono y el texto al botón
+            newDetalles.appendChild(buttonText);
+            newDetalles.appendChild(icon);
+            
+            // Agregar el botón al div
+            newItem.appendChild(newDetalles);
+            
 
             list.appendChild(newItem)
         });
