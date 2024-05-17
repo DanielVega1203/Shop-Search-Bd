@@ -108,7 +108,7 @@ img{
     display: block;
     margin-bottom: 20px;
     border-radius: 15px;
-    background-color: #D4C9C7;
+    background-color: #c7d4c7;
 }
 
 .filterContent .submit {
@@ -118,7 +118,8 @@ img{
 .filter .item label{
     width: 100%;
     color: rgb(37, 37, 37);
-    font-size: 0.9vw;
+    font-size: 1em;
+    line-height: 1.5em;
     margin: 10px;
 }
 
@@ -155,7 +156,8 @@ img{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.8vw;
+    font-size: 1.8em;
+    line-height: 2.3em;
 }
 
 
@@ -195,10 +197,20 @@ img{
 #list .item .title{
     font-weight: bold;
 }
+
+#list .item .price-button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+    margin-top: 15px;
+}
+
 #list .item .precio{
     margin: 7px;
-    color: #f58576;
+    font-weight: 600;
 }
+
 
 #list .item .detalles{
     cursor: pointer;

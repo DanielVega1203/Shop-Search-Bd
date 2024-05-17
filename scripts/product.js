@@ -235,19 +235,23 @@ function showProduct(productFilter) {
     newImage.src = item.image;
     newItem.appendChild(newImage);
 
-    // Crea el titulo y lo agrega
+    // Crea el título y lo agrega
     let newTitle = document.createElement("div");
     newTitle.classList.add("title");
     newTitle.innerText = item.nombre;
     newItem.appendChild(newTitle);
 
-    // Crea el precio y lo agrega
+    // Crea el contenedor para precio y botón
+    let newPriceButtonContainer = document.createElement("div");
+    newPriceButtonContainer.classList.add("price-button-container");
+
+    // Crea el precio y lo agrega al contenedor
     let newPrice = document.createElement("div");
     newPrice.classList.add("precio");
     newPrice.innerText = "s/." + item.precio.toLocaleString();
-    newItem.appendChild(newPrice);
+    newPriceButtonContainer.appendChild(newPrice);
 
-    // Crea el botón ver más y lo agrega
+    // Crea el botón ver más y lo agrega al contenedor
     let newDetalles = document.createElement("button");
     newDetalles.classList.add("detalles");
 
@@ -256,7 +260,7 @@ function showProduct(productFilter) {
     icon.classList.add("fas", "fa-chevron-right");
 
     // Texto para el botón
-    let buttonText = document.createTextNode("Ver más ");
+    let buttonText = document.createTextNode("Detalles");
 
     // Agregar el icono y el texto al botón
     newDetalles.appendChild(buttonText);
@@ -265,24 +269,22 @@ function showProduct(productFilter) {
     // Agregar evento al botón
     newDetalles.addEventListener("click", () => showDetails(item));
 
-    // Agregar el botón al div
-    newItem.appendChild(newDetalles);
+    // Agregar el botón al contenedor
+    newPriceButtonContainer.appendChild(newDetalles);
+
+    // Agregar el contenedor de precio y botón al div principal
+    newItem.appendChild(newPriceButtonContainer);
 
     list.appendChild(newItem);
   });
 }
+
 
 function showDetails(item) {
   // Crear y mostrar el fondo difuminado
   let overlay = document.createElement("div");
   overlay.classList.add("overlay");
   document.body.appendChild(overlay);
-
-  // Eliminar cualquier cuadro de detalles existente
-  let existingDetailBox = document.querySelector(".detail-box");
-  if (existingDetailBox) {
-    existingDetailBox.remove();
-  }
 
   // Crear el cuadro de detalles
   let detailBox = document.createElement("div");
@@ -299,7 +301,7 @@ function showDetails(item) {
       <p><strong>Colores disponibles:</strong> ${item.descripcion.color.join(', ')}</p>
       <p><strong>Tallas disponibles:</strong> ${item.descripcion.tallas.join(', ')}</p>
       <p><strong>Tipo:</strong> ${item.descripcion.tipo}</p>
-      <button>Comprar</button>
+      <button class="buy-button">Comprar</button>
   </div>
 `;
 
@@ -313,6 +315,17 @@ function showDetails(item) {
   // Agregar clases para mostrar el cuadro de detalles y el overlay
   detailBox.classList.add("show");
   overlay.classList.add("show");
+
+  // Agregar evento de clic al botón "Comprar"
+  let buyButton = detailBox.querySelector(".buy-button");
+  buyButton.addEventListener("click", () => {
+    Swal.fire({
+      title: "Compra exitosa!",
+      icon: "success"
+    }).then(() => {
+      closeDetails();
+    });
+  });
 }
 
 function closeDetails() {
@@ -339,6 +352,7 @@ function closeDetails() {
     );
   }
 }
+
 
 filter.addEventListener("submit", function (event) {
   event.preventDefault();
