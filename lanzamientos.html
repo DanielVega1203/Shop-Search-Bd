@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide de Novedades</title>
+    <link rel="stylesheet" href="novedades.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slide active" style="background-color: #ffcccb;">
+            <h2>Novedad 1</h2>
+            <p>Descripción de la novedad 1.</p>
+        </div>
+        <div class="slide" style="background-color: #add8e6;">
+            <h2>Novedad 2</h2>
+            <p>Descripción de la novedad 2.</p>
+        </div>
+        <div class="slide" style="background-color: #90ee90;">
+            <h2>Novedad 3</h2>
+            <p>Descripción de la novedad 3.</p>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <script src="./scripts/lanzamiento.js"></script>
+</body>
+</html>

@@ -73,7 +73,8 @@ function showResults(city) {
         <h3>${store.nombre}</h3>
         <p><strong>Ubicación:</strong> ${store.ubicacion}</p>
         <p><strong>Horario:</strong> ${store.Horario}</p>
-        <p><strong>Disponibilidad:</strong> ${store.disponibilidad}</p>
+        </br>
+        <p><strong style="color: green;">Disponibilidad:</strong> ${store.disponibilidad}</p>
       `;
       resultsDiv.appendChild(storeDiv);
     });
@@ -87,3 +88,7 @@ form.addEventListener('submit', function(event) {
   const city = document.getElementById('city').value;
   showResults(city);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  showResults('all')
+})
