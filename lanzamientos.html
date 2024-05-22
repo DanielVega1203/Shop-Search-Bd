@@ -1,28 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slide de Novedades</title>
-    <link rel="stylesheet" href="novedades.css">
-</head>
-<body>
-    <div class="slider">
-        <div class="slide active" style="background-color: #ffcccb;">
-            <h2>Novedad 1</h2>
-            <p>Descripción de la novedad 1.</p>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="./index.html" class="nav__logo"
+          ><img src="./img/logo.png" alt="image"
+        /></a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./lanzamientos.html" class="nav__link">Lanzamientos</a>
+            </li>
+            <li class="nav__item">
+              <a href="./productos.html" class="nav__link">Productos</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Colecciones</a>
+            </li>
+            <li class="nav__item">
+              <a href="./tienda.html" class="nav__link">Tiendas</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
         </div>
-        <div class="slide" style="background-color: #add8e6;">
-            <h2>Novedad 2</h2>
-            <p>Descripción de la novedad 2.</p>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-apps-fill"></i>
         </div>
-        <div class="slide" style="background-color: #90ee90;">
-            <h2>Novedad 3</h2>
-            <p>Descripción de la novedad 3.</p>
+      </nav>
+    </header>
+
+    <div class="carruselA">
+      <h1 style="margin-left: 100px; margin-top: 30px; color: black;">Proximos Lanzamientos</h1>
+      <div class="card-gallery">
+        <div class="card">
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/su20-nsw-am2090-rosalia-stills-blue-on-body-hero-1594364289.jpg?crop=1.00xw:1.00xh;0,0&resize=2048:*"
+            alt="Image 1"
+          />
+          <button class="title2">Mujer</button>
         </div>
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="card">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLOtQOC5w5tPj_QoyI8cmiaqfnokELslhd8wN4_ph5F-KpgFRZkjTVg9oBEqjJw5Z1EI2GQAI_Vbrm3x8MhkNPY-bgMVRJnWL6J7aAUPz-wGRSuKGixQeSgMKoJdBxM8_49wliOReB1xn4DNDutrhXnVuPRB1P3SRJyFJIARH__xrOpFM75eqKfcKO2Imq/s1600/Nike%20Zoom%20Mercurial%20Kylian%20Mbapp%C3%A9%202023-24%20Signature%20Boots%20%20%282%29.jpg"
+            alt="Image 2"
+          />
+          <button class="title2">Hombre</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_484,c_limit/bc8e3831-eff2-4d35-8d62-947ae2fa2279/el-mejor-calzado-de-f%C3%BAtbol-nike-para-ni%C3%B1os-que-puedes-comprar-ahora.jpg"
+            alt="Image 3"
+          />
+          <button class="title2">Niño</button>
+        </div>
+      </div>
     </div>
+
+    <div class="containerB">
+      <div class="card-carousel">
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dw0d89cdcf/CLPs/Jordan/Desktop_skate.jpg">
+          <div class="card-content">
+            <h3>Skate</h3>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dwd492b0b3/CLPs/Jordan/Desktop_Basquet.jpg">
+          <div class="card-content">
+            <h3>Basquet</h3>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dw1c8cdab6/CLPs/Jordan/Desktop_yoga.jpg">
+          <div class="card-content">
+            <h3>Yoga</h3>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dw1971dba8/CLPs/Jordan/Desktop_Tennis.jpg">
+          <div class="card-content">
+            <h3>Tenis</h3>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dwf2956b54/CLPs/Jordan/Desktop_Futbol.jpg">
+          <div class="card-content">
+            <h3>Futbol</h3>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dwb65bc6d7/CLPs/Jordan/Desktop_Entrenar.jpg">
+          <div class="card-content">
+            <h3>Entrenar</h3>
+          </div>
+        </div>
+        <div class="card2">
+          <img src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BJKZ_STG/on/demandware.static/-/Library-Sites-NikePeruSharedLibrary/default/dw1a6f0603/CLPs/Jordan/Desktop_Correr.jpg">
+          <div class="card-content">
+            <h3>Correr</h3>
+          </div>
+        </div>
+      </div>
+
+      <button class="prev" onclick="moveCarousel(-1)"><</button>
+      <button class="next" onclick="moveCarousel(1)">></button>
+    </div>
+
     <script src="./scripts/lanzamiento.js"></script>
-</body>
+  </body>
 </html>
