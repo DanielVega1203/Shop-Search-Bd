@@ -354,6 +354,7 @@ function closeDetails() {
 }
 
 
+
 filter.addEventListener("submit", function (event) {
   event.preventDefault();
   let valueFilter = event.target.elements;
