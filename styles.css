@@ -155,17 +155,25 @@ footer {
   max-width: 100%;
   display: flex;
   max-height: 100%;
+  flex-wrap: wrap; /* Añadido para que los elementos se envuelvan */
 }
 
 .filterContent {
   width: 25%;
 }
 
-@media screen and (max-width: 1023px) {
+#list {
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Añadimos un gap entre las columnas */
+}
 
+@media screen and (max-width: 1023px) {
   .contenedor {
     width: 100%;
-    display: block; 
+    display: block;
   }
 
   .filterContent {
@@ -173,18 +181,25 @@ footer {
   }
 
   #list {
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Añadimos un gap entre las columnas */
   }
-  
+
   #list .item {
-    margin: 20px;
-    width: auto;
+    margin: 10px; /* Reducimos el margen en versión móvil */
   }
 
   #list .item .detalles {
-    display: none; /* para esconder el boton */
+    display: none; /* para esconder el botón */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #list {
+    grid-template-columns: 1fr; /* Una columna para pantallas aún más pequeñas */
   }
 }
 
@@ -250,13 +265,6 @@ footer {
   line-height: 2.3em;
 }
 
-#list {
-  width: 80%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 #list .item {
   background-color: #cfcfcf65;
   margin: 50px 20px 0 20px;
@@ -312,6 +320,7 @@ footer {
 #list .item .detalles:hover {
   background-color: #195ddb21;
 }
+
 
 /* Estilo para el cuadro de detalles */
 .detail-box,
