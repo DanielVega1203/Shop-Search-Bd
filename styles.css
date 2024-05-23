@@ -454,10 +454,16 @@ footer {
 
 @media screen and (max-width: 1023px) {
   .conteTienda {
-    display: block; 
+    display: block;
+    height: auto;
   }
 
   .tiendaContent {
+    width: 100%;
+  }
+
+  .mapContent {
+    display: block;
     width: 100%;
   }
 }
