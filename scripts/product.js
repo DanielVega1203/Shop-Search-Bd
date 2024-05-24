@@ -232,6 +232,7 @@ function showProduct(productFilter) {
 
     // Crea la imagen y la agrega
     let newImage = new Image();
+    newImage.classList.add("imagenShoes");
     newImage.src = item.image;
     newItem.appendChild(newImage);
 

@@ -188,18 +188,18 @@ footer {
     gap: 10px; /* Añadimos un gap entre las columnas */
   }
 
-  #list .item {
-    margin: 10px; /* Reducimos el margen en versión móvil */
-  }
-
   #list .item .detalles {
     display: none; /* para esconder el botón */
   }
-}
 
-@media screen and (max-width: 767px) {
-  #list {
-    grid-template-columns: 1fr; /* Una columna para pantallas aún más pequeñas */
+  #list .item {
+    margin: 0px 10px;
+  }
+
+  #list .item .imagenShoes {
+    width: 10px;
+    border-radius: 50px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -282,7 +282,7 @@ footer {
   transform: scale(1.05);
 }
 
-#list .item img {
+#list .item .imagenShoes {
   margin: 20px 10px 30px 10px;
   max-width: 80%;
   width: auto;
@@ -392,6 +392,110 @@ footer {
   visibility: visible;
 }
 
+/* Page nosotros */
+
+
+.cards-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  height: 90vh;
+}
+
+/* Estilos de las tarjetas individuales */
+.card2 {
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  width: 300px;
+}
+
+.card2:hover{
+  transform: scale(1.05);
+}
+
+.card2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, cadetblue, #fff);
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.card2:hover:before {
+  left: 0;
+}
+
+.card2 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos de la imagen dentro de la tarjeta */
+.card2-image {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+
+.card2-image img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+/* Estilos del contenido de la tarjeta */
+.card-content2 {
+    padding: 20px;
+}
+
+.card-content2 h2 {
+    color: #000000;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.card-content2 p {
+    color: #2b2b2b;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card-content2 p:hover{
+  color: white;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .cards-container2 {
+      display: block;
+      text-align: center;
+      margin: auto;
+      width: 80%;
+      height: auto;
+    }
+
+    .card2 {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+}
+
 /* Page Tienda */
 
 .conteTienda {
@@ -486,23 +590,36 @@ footer {
 
 /* PAGE LANZAMIENTO */
 
-.conteTienda2 {
-  display: block;
+.titleLanzamiento {
+  margin-left: 100px; 
+  margin-top: 30px; 
+  color: black;
 }
 
 @media screen and (max-width: 1023px) {
 
+  .titleLanzamiento {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0; 
+  }
+
   .carruselA {
-    height: 10%;
+    display: block;
   }
 
-  .card-gallery {
-    height: 10%;
+  .carruselA .card-gallery {
+    display: block;;
+    padding: 0 20px;
   }
 
-  .card  {
-    height: 10%;
+
+  .card-gallery .card {
+    width: 100%;
+    margin-bottom: 20px;
   }
+  
+
 }
 
 .card-gallery {
@@ -541,6 +658,10 @@ footer {
     transform: scale(1.08);
 }
 
+.card {
+  height: 100%;
+}
+
 .card img {
     width: 100%;
     height: auto;
@@ -561,6 +682,7 @@ footer {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
   }
   
   .card2 {
